@@ -1,0 +1,1 @@
+# alc--kar-st-rma-ve-aktarma-makinesi
