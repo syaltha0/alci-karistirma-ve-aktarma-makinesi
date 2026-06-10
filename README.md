@@ -81,8 +81,8 @@ Bu proje; dalgıç pompa, rötari valf, karıştırıcı, konveyör bant, servo 
 
 | Kablo | Bağlantı |
 |---|---|
-| Kahverengi (Toprak) | Arduino GND + Harici 5V (−) |
-| Kırmızı (Güç) | Harici 5V (+) |
+| Kahverengi (Toprak) | Arduino GND |
+| Kırmızı (Güç) | Arduino 5V |
 | Turuncu (İşaret) | Arduino Pin 8 |
 
 ---
@@ -126,7 +126,7 @@ Bu proje; dalgıç pompa, rötari valf, karıştırıcı, konveyör bant, servo 
 Dalgıç Pompa — 35 sn çalışır (suyun karıştırma kabına aktarımı)
    │
    ▼
-Rötari Valfin Motoru — 8 sn çalışır (alçının karıştırma kabına aktarımı)
+Rötari Valf — 8 sn çalışır (alçının karıştırma kabına aktarımı)
    │
    ▼
 Karıştırıcı Motor — 10 sn çalışır
@@ -161,7 +161,7 @@ Son bant hareketi — 3 sn
 | Karıştırıcı | 191 | %75 |
 | Konveyör Bant | 191 | %75 |
 
-> Rötari tam hızda doğrudan HIGH sinyaliyle sürülür; Servo kütüphanesiyle zamanlayıcı çakışmasını önlemek için darbe genişliği yerine `digitalWrite(HIGH)` tercih edilir.
+> Rötari tam hızda doğrudan HIGH sinyaliyle sürülür, Servo kütüphanesiyle zamanlayıcı çakışmasını önlemek için darbe genişliği yerine `digitalWrite(HIGH)` tercih edilir.
 
 ---
 
