@@ -57,8 +57,6 @@ Bu proje; dalgıç pompa, rötari valf, karıştırıcı, konveyör bant, servo 
 - **ÇIKIŞ 1 / ÇIKIŞ 2** → Konveyör Bandın DA Motoru
 - **ÇIKIŞ 3 / ÇIKIŞ 4** → Rötari Valfin DA Motoru
 
-> ⚠️ ENA ve ENB üzerindeki köprü bağlantılarını söküp kablo takın.
-
 ---
 
 ### L298N #2 — Karıştırıcı + Dalgıç Pompa
@@ -76,8 +74,6 @@ Bu proje; dalgıç pompa, rötari valf, karıştırıcı, konveyör bant, servo 
 
 - **ÇIKIŞ 1 / ÇIKIŞ 2** → Karıştırıcının DA Motoru
 - **ÇIKIŞ 3 / ÇIKIŞ 4** → Dalgıç Pompa
-
-> ⚠️ ENA ve ENB üzerindeki köprü bağlantılarını söküp kablo takın.
 
 ---
 
