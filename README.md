@@ -220,7 +220,7 @@ Ekranda aktif aşama adı, kalan süre ve ilerleme çubuğu görüntülenir.
 
 | | |
 |---|---|
-| ![Devre genel görünüm](foto1.jpeg) | ![Motor sürücüler](foto2.jpeg) |
+| ![genel görünüm](foto1.jpeg) | ![Kablolama](foto2.jpeg) |
 
 ### Video
 
