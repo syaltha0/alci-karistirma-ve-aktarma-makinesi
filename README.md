@@ -227,9 +227,3 @@ LCD ekranda aktif faz adı, kalan süre ve ilerleme çubuğu görüntülenir.
 ### Video
 
 [![Çalışma videosu](https://img.shields.io/badge/▶_Video-YouTube-red?style=for-the-badge&logo=youtube)](https://youtube.com/shorts/MHnwjVbow54)
-
----
-
-## Lisans
-
-MIT License — dilediğiniz gibi kullanabilirsiniz.
