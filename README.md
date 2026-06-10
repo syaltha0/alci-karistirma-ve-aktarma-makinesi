@@ -222,8 +222,7 @@ LCD ekranda aktif faz adı, kalan süre ve ilerleme çubuğu görüntülenir.
 
 | | |
 |---|---|
-| ![Devre genel görünüm](media/foto1.jpg) | ![Motor sürücüler](media/foto2.jpg) |
-| ![LCD ekran](media/foto3.jpg) | ![Makine genel](media/foto4.jpg) |
+| ![Devre genel görünüm](media/foto1.jpeg) | ![Motor sürücüler](media/foto2.jpeg) |
 
 ### Video
 
