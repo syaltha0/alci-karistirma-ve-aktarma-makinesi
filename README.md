@@ -1,6 +1,6 @@
 # 🏭 Alçı Dökme Makinesi Otomasyonu
 
-Arduino Mega 2560 tabanlı, alçı karıştırma ve kalıba dökme işlemini tam otomatik olarak gerçekleştiren makine kontrol sistemi.
+Okul projem için rduino Mega 2560 tabanlı, alçı karıştırma ve kalıba dökme işlemini tam otomatik olarak gerçekleştiren makine kontrol sistemi.
 
 ---
 
@@ -19,7 +19,7 @@ Arduino Mega 2560 tabanlı, alçı karıştırma ve kalıba dökme işlemini tam
 
 ## Genel Bakış
 
-Bu proje; dalgıç pompa, rötari, karıştırıcı, konveyör bant, servo kapak ve IR sensörden oluşan bir alçı dökme makinesini Arduino Mega 2560 ile kontrol eder. Sistem, su dolumu → karıştırma → kalıplara dökme adımlarını sırayla ve otomatik olarak yürütür.
+Bu proje; dalgıç pompa, rötari valf, karıştırıcı, konveyör bant, servo kapak ve IR sensörden oluşan bir alçı dökme makinesini Arduino Mega 2560 ile kontrol eder. Sistem, su dolumu → karıştırma → kalıplara dökme adımlarını sırayla ve otomatik olarak yürütür.
 
 ---
 
@@ -29,7 +29,7 @@ Bu proje; dalgıç pompa, rötari, karıştırıcı, konveyör bant, servo kapak
 |---|---|---|
 | Arduino Mega 2560 | 1 | Ana mikrodenetleyici |
 | L298N Motor Sürücü | 2 | DC motor kontrolü |
-| 12V DC Motor | 3 | Rötari, Karıştırıcı, Konveyör Bant |
+| 12V DC Motor | 3 | Rötari Valf, Karıştırıcı, Konveyör Bant |
 | Dalgıç Pompa | 1 | Su/sıvı aktarımı |
 | Servo Motor (MG996R) | 1 | Dağıtım kapağı |
 | IR Sensör | 1 | Kap algılama |
@@ -41,7 +41,7 @@ Bu proje; dalgıç pompa, rötari, karıştırıcı, konveyör bant, servo kapak
 
 ## Devre Bağlantıları
 
-### L298N #1 — Rötari + Konveyör Bant
+### L298N #1 — Rötari Valf + Konveyör Bant
 
 | L298N #1 | Arduino Mega |
 |---|---|
@@ -54,9 +54,8 @@ Bu proje; dalgıç pompa, rötari, karıştırıcı, konveyör bant, servo kapak
 | 12V | GK #1 (+) |
 | GND | GK #1 (−) + Arduino GND |
 
-- **OUT1 / OUT2** → Rötari DC Motor  
-- **OUT3 / OUT4** → Konveyör Bant DC Motor  
-> ⚠️ ENA ve ENB üzerindeki jumper'ları söküp kablo takın.
+- **OUT1 / OUT2** → Konveyör Bandın DC Motoru
+- **OUT3 / OUT4** → Rötari Valfin DC Motoru
 
 ---
 
@@ -73,9 +72,8 @@ Bu proje; dalgıç pompa, rötari, karıştırıcı, konveyör bant, servo kapak
 | 12V | GK #2 (+) |
 | GND | GK #2 (−) + Arduino GND |
 
-- **OUT1 / OUT2** → Karıştırıcı DC Motor  
+- **OUT1 / OUT2** → Karıştırıcının DC Motoru  
 - **OUT3 / OUT4** → Dalgıç Pompa  
-> ⚠️ ENA ve ENB üzerindeki jumper'ları söküp kablo takın.
 
 ---
 
@@ -122,13 +120,13 @@ Bu proje; dalgıç pompa, rötari, karıştırıcı, konveyör bant, servo kapak
 ## Çalışma Sırası
 
 ```
-[BAŞLA]
+[BAŞLATMA KOMUTU]
    │
    ▼
-Dalgıç Pompa — 35 sn çalışır (su/alçı besleme)
+Dalgıç Pompa — 35 sn çalışır (suyun karıştırma kabına aktarımı)
    │
    ▼
-Rötari Motor — 8 sn çalışır (karıştırma hazırlığı)
+Rötari Valfin Motoru — 8 sn çalışır (alçının karıştırma kabına aktarımı)
    │
    ▼
 Karıştırıcı Motor — 10 sn çalışır
@@ -163,7 +161,7 @@ Son bant hareketi — 3 sn
 | Karıştırıcı | 191 | %75 |
 | Konveyör Bant | 191 | %75 |
 
-> Rötari tam hızda dijital HIGH ile sürülür; Servo kütüphanesi Timer çakışmasını önlemek için PWM yerine `digitalWrite(HIGH)` tercih edilir.
+> Rötari tam hızda dijital HIGH ile sürülür, Servo kütüphanesi Timer çakışmasını önlemek için PWM yerine `digitalWrite(HIGH)` tercih edilir.
 
 ---
 
